@@ -1,0 +1,102 @@
+{
+  "extName": {
+    "message": "Extension Name",
+    "description": "The name of the extension, displayed in the browser"
+  },
+  "extDescription": {
+    "message": "A browser extension built with WXT and React",
+    "description": "The description of the extension, displayed in the browser"
+  },
+  "signIn": {
+    "message": "Sign in",
+    "description": "Sign in button text"
+  },
+  "signOut": {
+    "message": "Sign out",
+    "description": "Sign out button text"
+  },
+  "signInWithGoogle": {
+    "message": "Sign in with Google",
+    "description": "Sign in with Google button text"
+  },
+  "settings": {
+    "message": "Settings",
+    "description": "Settings page title"
+  },
+  "account": {
+    "message": "Account",
+    "description": "Account section title"
+  },
+  "notifications": {
+    "message": "Notifications",
+    "description": "Notifications setting label"
+  },
+  "notificationsDescription": {
+    "message": "Receive notifications about important updates",
+    "description": "Notifications setting description"
+  },
+  "syncData": {
+    "message": "Sync data",
+    "description": "Sync data setting label"
+  },
+  "syncDataDescription": {
+    "message": "Automatically sync your data across devices",
+    "description": "Sync data setting description"
+  },
+  "theme": {
+    "message": "Theme",
+    "description": "Theme setting label"
+  },
+  "themeDescription": {
+    "message": "Choose your preferred color scheme",
+    "description": "Theme setting description"
+  },
+  "themeSystem": {
+    "message": "System",
+    "description": "System theme option"
+  },
+  "themeLight": {
+    "message": "Light",
+    "description": "Light theme option"
+  },
+  "themeDark": {
+    "message": "Dark",
+    "description": "Dark theme option"
+  },
+  "about": {
+    "message": "About",
+    "description": "About section title"
+  },
+  "version": {
+    "message": "Version",
+    "description": "Version label"
+  },
+  "developer": {
+    "message": "Developer",
+    "description": "Developer label"
+  },
+  "privacyPolicy": {
+    "message": "Privacy Policy",
+    "description": "Privacy policy link text"
+  },
+  "termsOfService": {
+    "message": "Terms of Service",
+    "description": "Terms of service link text"
+  },
+  "support": {
+    "message": "Support",
+    "description": "Support link text"
+  },
+  "loading": {
+    "message": "Loading...",
+    "description": "Loading text"
+  },
+  "error": {
+    "message": "Error",
+    "description": "Error text"
+  },
+  "success": {
+    "message": "Success",
+    "description": "Success text"
+  }
+}
