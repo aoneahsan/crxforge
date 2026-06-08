@@ -128,7 +128,7 @@ async function handleInstall(details: chrome.runtime.InstalledDetails) {
     if (settings?.notifications) {
       chrome.notifications?.create({
         type: 'basic',
-        iconUrl: chrome.runtime.getURL('assets/icons/icon-128.png'),
+        iconUrl: chrome.runtime.getURL('icon/128.png'),
         title: 'Extension Updated',
         message: 'Click to see what\'s new!',
       });

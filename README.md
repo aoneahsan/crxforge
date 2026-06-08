@@ -1,5 +1,7 @@
 <div align="center">
 
+<img src="assets/icons/icon.svg" width="112" height="112" alt="CrxForge logo" />
+
 # CrxForge ⚡
 
 **Forge production-ready, cross-browser extensions in minutes.**
@@ -62,7 +64,7 @@ Then load the unpacked build:
 - **Chrome / Edge:** open `chrome://extensions`, enable *Developer mode*, click *Load unpacked*, and select `.output/chrome-mv3`.
 - **Firefox:** open `about:debugging#/runtime/this-firefox`, click *Load Temporary Add-on*, and select `.output/firefox-mv2/manifest.json`.
 
-> ℹ️ Add your extension icons (`16`, `32`, `48`, `128` px) to `assets/icons/` before building for the stores.
+> ℹ️ CrxForge ships a default icon set in `public/icon/`. Swap in your own — or edit `assets/icons/icon.svg` and re-render — before publishing to the stores.
 
 ## 📂 Project structure
 
@@ -80,7 +82,8 @@ crxforge/
 │   └── messaging.ts       # Typed message passing
 ├── hooks/                 # React hooks (useAuth, useStorage)
 ├── components/            # Shared React components
-├── assets/icons/          # Extension icons (add 16/32/48/128)
+├── public/icon/           # Shipped extension icons — 16/32/48/128 px PNG
+├── assets/icons/          # Icon master — icon.svg (re-render the PNGs from this)
 ├── _locales/              # i18n messages
 ├── wxt.config.ts          # WXT + manifest configuration
 └── package.json
@@ -107,7 +110,7 @@ grep -rE "googletagmanager\.com|apis\.google\.com/js|recaptcha|cdn\.amplitude|fi
 3. **`entrypoints/popup/App.tsx` & `entrypoints/options/App.tsx`** — replace the demo UI with yours, and point the Privacy / Terms / Support links at your own pages.
 4. **`entrypoints/background.ts`** — register your message handlers and configure analytics keys.
 5. **`entrypoints/content.ts`** — set your `matches` patterns and content-script logic.
-6. **`assets/icons/`** — add `16/32/48/128` px icons.
+6. **Icons** — the default CrxForge mark ships in `public/icon/` (`16/32/48/128` px); the editable master is `assets/icons/icon.svg`. After editing the SVG, re-render with: `for s in 16 32 48 128; do rsvg-convert -w $s -h $s assets/icons/icon.svg -o public/icon/$s.png; done`
 
 ## 📜 Scripts
 

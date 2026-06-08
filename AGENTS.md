@@ -207,8 +207,9 @@ crxforge/
 │   ├── useAuth.ts         # Auth hook
 │   └── useStorage.ts      # Storage hook
 ├── components/            # Shared React components
+├── public/icon/          # Shipped extension icons — 16/32/48/128 px PNG
 ├── assets/               # Static assets
-│   └── icons/            # Extension icons (16, 32, 48, 128)
+│   └── icons/            # Icon master — icon.svg (re-render PNGs from this)
 ├── _locales/             # i18n messages
 │   └── en/messages.json  # English strings
 ├── docs/                 # Documentation

@@ -41,12 +41,12 @@ export default defineConfig({
       extension_pages: "script-src 'self'; object-src 'self'",
     },
 
-    // Icons
+    // Icons — PNGs ship from public/icon/ (generated from assets/icons/icon.svg).
     icons: {
-      16: 'assets/icons/icon-16.png',
-      32: 'assets/icons/icon-32.png',
-      48: 'assets/icons/icon-48.png',
-      128: 'assets/icons/icon-128.png',
+      16: 'icon/16.png',
+      32: 'icon/32.png',
+      48: 'icon/48.png',
+      128: 'icon/128.png',
     },
   },
 

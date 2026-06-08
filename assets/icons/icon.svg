@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" width="256" height="256" role="img" aria-labelledby="crxforgeTitle crxforgeDesc">
+  <title id="crxforgeTitle">CrxForge</title>
+  <desc id="crxforgeDesc">A chiseled lightning bolt throwing warm forge sparks on an electric blue-to-violet tile.</desc>
+  <defs>
+    <linearGradient id="cf-tile" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3B82F6"/>
+      <stop offset="0.52" stop-color="#4F46E5"/>
+      <stop offset="1" stop-color="#6D28D9"/>
+    </linearGradient>
+    <radialGradient id="cf-sheen" cx="0.30" cy="0.22" r="0.95">
+      <stop offset="0" stop-color="#FFFFFF" stop-opacity="0.38"/>
+      <stop offset="0.40" stop-color="#FFFFFF" stop-opacity="0.06"/>
+      <stop offset="1" stop-color="#FFFFFF" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="cf-ember" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#FBBF24" stop-opacity="0.85"/>
+      <stop offset="0.55" stop-color="#F59E0B" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#F59E0B" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="cf-bolt" x1="0.3" y1="0" x2="0.7" y2="1">
+      <stop offset="0" stop-color="#FFFFFF"/>
+      <stop offset="1" stop-color="#DBEAFE"/>
+    </linearGradient>
+    <filter id="cf-shadow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="7" stdDeviation="8" flood-color="#0A0F1F" flood-opacity="0.38"/>
+    </filter>
+  </defs>
+
+  <!-- Tile + sheen + forged inner bevel -->
+  <rect x="16" y="16" width="224" height="224" rx="56" fill="url(#cf-tile)"/>
+  <rect x="16" y="16" width="224" height="224" rx="56" fill="url(#cf-sheen)"/>
+  <rect x="17.5" y="17.5" width="221" height="221" rx="54.5" fill="none" stroke="#FFFFFF" stroke-opacity="0.16" stroke-width="3"/>
+
+  <!-- Warm forge glow at the strike point -->
+  <ellipse cx="120" cy="198" rx="58" ry="42" fill="url(#cf-ember)"/>
+
+  <!-- Chiseled lightning bolt -->
+  <g filter="url(#cf-shadow)">
+    <path d="M138 34 L84 138 L120 138 L104 222 L176 110 L138 110 L162 34 Z" fill="url(#cf-bolt)"/>
+    <path d="M176 110 L138 110 L162 34 Z" fill="#4F46E5" fill-opacity="0.16"/>
+  </g>
+
+  <!-- Forge sparks -->
+  <path d="M159 184 L164 197 L177 202 L164 207 L159 220 L154 207 L141 202 L154 197 Z" fill="#FCD34D"/>
+  <circle cx="184" cy="172" r="4.2" fill="#FBBF24"/>
+  <circle cx="150" cy="216" r="3" fill="#FBBF24"/>
+  <circle cx="178" cy="200" r="2.6" fill="#FDE68A"/>
+</svg>
