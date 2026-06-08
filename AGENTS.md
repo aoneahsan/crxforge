@@ -156,9 +156,14 @@ MUST return 0 matches.
 - Strict CSP: `script-src 'self'; object-src 'self'`
 - Minimal permissions (request at runtime when possible)
 
-### 5. Package Manager
+## Package Manager Hierarchy: nvm → npm (global) → yarn (local) (IRON-SOLID)
 
-Use `yarn` exclusively. Never use `npm` or `pnpm`.
+Three tiers, each tool ONLY for its tier — for the best, most reproducible dev results:
+- **`nvm`** → install/update Node.js (which bundles `npm`): `nvm install --lts`. Use nvm to get/update `npm` itself.
+- **`npm`** → ALL global packages: `npm install -g yarn` (install yarn globally if missing) + `npm install -g <pkg>` (every other global CLI).
+- **`yarn`** → ALL local project work: `yarn`, `yarn add <pkg>`, `yarn add -D <pkg>` inside the project.
+
+❌ NEVER use `npm`/`pnpm` for LOCAL installs. NEVER use `pnpm` at all. ✅ Only `yarn.lock` in the project — delete `package-lock.json` and `pnpm-lock.yaml`.
 
 ## DO NOTs
 
@@ -167,7 +172,7 @@ Use `yarn` exclusively. Never use `npm` or `pnpm`.
 | DO NOT use Firebase Auth SDK | Loads remote scripts, causes store rejection |
 | DO NOT use CDN-loaded analytics | Violates MV3 remote code policy |
 | DO NOT use native HTML elements | Use Radix UI Themes components |
-| DO NOT use npm or pnpm | yarn is the mandated package manager |
+| DO NOT use npm/pnpm for LOCAL installs | yarn is for local work; npm only for global CLIs (`npm install -g`) |
 | DO NOT use eval() or new Function() | Violates CSP, causes store rejection |
 | DO NOT request unnecessary permissions | Causes "insufficient justification" rejection |
 | DO NOT stuff keywords in description | Store policy violation |
